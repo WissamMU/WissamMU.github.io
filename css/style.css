@@ -264,6 +264,10 @@ body {
     opacity: 1;
     display: grid;
     place-items: center;
+<<<<<<< HEAD
+=======
+    margin-top: 10px;
+>>>>>>> 0b94ce3 (update)
 }
 
 .slides-BTNS .prev i,
@@ -271,6 +275,14 @@ body {
     color: var(--gray-dark) !important;
 }
 
+<<<<<<< HEAD
+=======
+.work-details{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+>>>>>>> 0b94ce3 (update)
 
 /* slider */
 
@@ -352,6 +364,14 @@ body {
     color: var(--gray-dark);
 }
 
+<<<<<<< HEAD
+=======
+.ltr{
+    direction: ltr;
+    float: right;
+}
+
+>>>>>>> 0b94ce3 (update)
 /* footer */
 
 footer {
