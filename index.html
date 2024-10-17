@@ -2,7 +2,7 @@
 <html lang="ar">
 
 <head>
-	<meta name="generator" content="Hugo 0.134.3">
+	<meta name="generator" content="Hugo 0.134.1">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Personal page </title>
@@ -11,6 +11,8 @@
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 
@@ -18,7 +20,7 @@
     
     
 
-    <section class="cover">
+<section class="cover">
     <div class="cover__container">
         <div class="cover-image">
             <img src="./images/profile-pic.jpg" alt="Profile Picture">
@@ -29,10 +31,11 @@
         </div>
     </div>
 </section>
-    <div class="page-body">
-        <div class="page-body__container">
-            <div class="row">
-                <div class="card card--half">
+<div class="page-body">
+    <div class="page-body__container">
+        
+        <div class="row">
+            <div class="card card--half" data-aos="fade-up" data-aos-duration="1000">
     <h2>البيانات الشخصية</h2>
     
         <div class="line">
@@ -84,7 +87,7 @@
         </div>
     
 </div>
-                <div class="card card--half">
+            <div class="card card--half" data-aos="fade-up" data-aos-duration="1000">
     <h2>المؤهلات</h2>
     
         <div class="line">
@@ -127,222 +130,237 @@
         </div>
     
 </div>
-            </div>
-            <div class="row">
-                <div class="card card--full">
-    <h2>المهارات</h2>
+        </div>
+
+        <div class="row">
+            <div class="card card-full" data-aos="fade-up" data-aos-duration="1000">
+    <h2>مهاراتي </h2>
     <div class="skills">
         <div class="skills__holder">
             
             <div class="skill">
-                <div class="skill__info">
-                    <div class="skill__info__head">
-                        <h2>bootstrap</h2>
-                        <span>80%</span>
-                    </div>
-                    <div class="skill__info__bar">
-                        <span class="layer" style="width: 80%; background-color: #e749a0"></span>
-                    </div>
+                <div class="skill__icon">
+                    <img src="images/skills/css.png" alt="img not found">
+                </div>
+                <div class="skill__name">
+                    <h2>css</h2>
                 </div>
             </div>
             
             <div class="skill">
-                <div class="skill__info">
-                    <div class="skill__info__head">
-                        <h2>javascript</h2>
-                        <span>60%</span>
-                    </div>
-                    <div class="skill__info__bar">
-                        <span class="layer" style="width: 60%; background-color: #87bdf4"></span>
-                    </div>
+                <div class="skill__icon">
+                    <img src="images/skills/js.png" alt="img not found">
+                </div>
+                <div class="skill__name">
+                    <h2>javascript</h2>
                 </div>
             </div>
             
             <div class="skill">
-                <div class="skill__info">
-                    <div class="skill__info__head">
-                        <h2>j-query</h2>
-                        <span>70%</span>
-                    </div>
-                    <div class="skill__info__bar">
-                        <span class="layer" style="width: 70%; background-color: #f4a950"></span>
-                    </div>
+                <div class="skill__icon">
+                    <img src="images/skills/html.png" alt="img not found">
+                </div>
+                <div class="skill__name">
+                    <h2>html</h2>
                 </div>
             </div>
             
             <div class="skill">
-                <div class="skill__info">
-                    <div class="skill__info__head">
-                        <h2>html</h2>
-                        <span>95%</span>
-                    </div>
-                    <div class="skill__info__bar">
-                        <span class="layer" style="width: 95%; background-color: #8dd352"></span>
-                    </div>
+                <div class="skill__icon">
+                    <img src="images/skills/bootstrap.png" alt="img not found">
+                </div>
+                <div class="skill__name">
+                    <h2>bootstrap</h2>
                 </div>
             </div>
             
             <div class="skill">
-                <div class="skill__info">
-                    <div class="skill__info__head">
-                        <h2>css</h2>
-                        <span>82%</span>
-                    </div>
-                    <div class="skill__info__bar">
-                        <span class="layer" style="width: 82%; background-color: #000000"></span>
-                    </div>
+                <div class="skill__icon">
+                    <img src="images/skills/sass.png" alt="img not found">
+                </div>
+                <div class="skill__name">
+                    <h2>sass</h2>
                 </div>
             </div>
             
             <div class="skill">
-                <div class="skill__info">
-                    <div class="skill__info__head">
-                        <h2>hugo</h2>
-                        <span>75%</span>
-                    </div>
-                    <div class="skill__info__bar">
-                        <span class="layer" style="width: 75%; background-color: #f75eee"></span>
-                    </div>
+                <div class="skill__icon">
+                    <img src="images/skills/webpack.png" alt="img not found">
+                </div>
+                <div class="skill__name">
+                    <h2>webpack</h2>
                 </div>
             </div>
             
             <div class="skill">
-                <div class="skill__info">
-                    <div class="skill__info__head">
-                        <h2>scss</h2>
-                        <span>85%</span>
-                    </div>
-                    <div class="skill__info__bar">
-                        <span class="layer" style="width: 85%; background-color: #009fdc"></span>
-                    </div>
+                <div class="skill__icon">
+                    <img src="images/skills/api.png" alt="img not found">
+                </div>
+                <div class="skill__name">
+                    <h2>api</h2>
                 </div>
             </div>
             
             <div class="skill">
-                <div class="skill__info">
-                    <div class="skill__info__head">
-                        <h2>webpack</h2>
-                        <span>80%</span>
-                    </div>
-                    <div class="skill__info__bar">
-                        <span class="layer" style="width: 80%; background-color: #f8874f"></span>
-                    </div>
+                <div class="skill__icon">
+                    <img src="images/skills/jquery.png" alt="img not found">
+                </div>
+                <div class="skill__name">
+                    <h2>jquery</h2>
                 </div>
             </div>
             
         </div>
     </div>
 </div>
-            </div>
-            <div class="row">
-                <div class="card card--full">
-    <h2>أعمالي السابقة <p>اضغط على الصورة للذهاب للعمل</p>
-    </h2>
+        </div>
 
-    <div class="slides-container" id="work">
-
-        <div class="slide-container__wraper">
-
+        <div class="row">
             
 
-            <div class="slides fade">
-                <div class="image-holder">
-                    <div class="overlay">
-                        <h2 class="work-details"> واجهة متجر الكتروني باستخدام بوتستراب
-                            <a class="visit-btn" href="https://wissammu.github.io/gitpage-webstore/">
-                                اذهب الى الموقع
-                            </a>
-                        </h2>
+<ul class="work-cards" data-aos="fade-up" data-aos-duration="1000">
+    <li>
+        <a href="https://wissammu.github.io/gitpage-webstore/" class="work-card" target="_blank">
+            <img src="images/slide1.jpg" class="work-card__image" alt="" />
+            <div class="work-card__overlay">
+                <div class="work-card__header">
+                    <svg class="work-card__arc" xmlns="http://www.w3.org/2000/svg">
+                        <path />
+                    </svg>
+                    <div class="work-card__header-text">
+                        <h3 class="work-card__title">واجهة متجر الكتروني باستخدام بوتستراب</h3>
                     </div>
-                    <a href="https://wissammu.github.io/gitpage-webstore/" >
-                        <img src="images/slide1.jpg" alt="معرض الاعمال">
-                    </a>
                 </div>
+                <p class="work-card__description">اضغط للذهاب للموقع</p>
             </div>
+        </a>
+    </li>
+</ul>
 
-            
 
-            <div class="slides fade">
-                <div class="image-holder">
-                    <div class="overlay">
-                        <h2 class="work-details">  موقع شركة باستخدام sass
-                            <a class="visit-btn" href="https://company-4kp.pages.dev/">
-                                اذهب الى الموقع
-                            </a>
-                        </h2>
+<ul class="work-cards" data-aos="fade-up" data-aos-duration="1000">
+    <li>
+        <a href="https://company-4kp.pages.dev/" class="work-card" target="_blank">
+            <img src="images/slide2.jpg" class="work-card__image" alt="" />
+            <div class="work-card__overlay">
+                <div class="work-card__header">
+                    <svg class="work-card__arc" xmlns="http://www.w3.org/2000/svg">
+                        <path />
+                    </svg>
+                    <div class="work-card__header-text">
+                        <h3 class="work-card__title"> موقع شركة باستخدام sass</h3>
                     </div>
-                    <a href="https://company-4kp.pages.dev/" >
-                        <img src="images/slide2.jpg" alt="معرض الاعمال">
-                    </a>
                 </div>
+                <p class="work-card__description">اضغط للذهاب للموقع</p>
             </div>
+        </a>
+    </li>
+</ul>
 
-            
 
-            <div class="slides fade">
-                <div class="image-holder">
-                    <div class="overlay">
-                        <h2 class="work-details"> لوحة تحكم 
-                            <a class="visit-btn" href="https://wissammu.github.io/controlPanel/">
-                                اذهب الى الموقع
-                            </a>
-                        </h2>
+<ul class="work-cards" data-aos="fade-up" data-aos-duration="1000">
+    <li>
+        <a href="https://wissammu.github.io/controlPanel/" class="work-card" target="_blank">
+            <img src="images/slide3.jpg" class="work-card__image" alt="" />
+            <div class="work-card__overlay">
+                <div class="work-card__header">
+                    <svg class="work-card__arc" xmlns="http://www.w3.org/2000/svg">
+                        <path />
+                    </svg>
+                    <div class="work-card__header-text">
+                        <h3 class="work-card__title">لوحة تحكم </h3>
                     </div>
-                    <a href="https://wissammu.github.io/controlPanel/" >
-                        <img src="images/slide3.jpg" alt="معرض الاعمال">
-                    </a>
                 </div>
+                <p class="work-card__description">اضغط للذهاب للموقع</p>
             </div>
+        </a>
+    </li>
+</ul>
 
-            
 
-            <div class="slides fade">
-                <div class="image-holder">
-                    <div class="overlay">
-                        <h2 class="work-details"> صفحة شخصية باستخدام هيوجو
-                            <a class="visit-btn" href="https://hugo-website-1ak.pages.dev/">
-                                اذهب الى الموقع
-                            </a>
-                        </h2>
+<ul class="work-cards" data-aos="fade-up" data-aos-duration="1000">
+    <li>
+        <a href="https://hugo-website-1ak.pages.dev/" class="work-card" target="_blank">
+            <img src="images/slide4.jpg" class="work-card__image" alt="" />
+            <div class="work-card__overlay">
+                <div class="work-card__header">
+                    <svg class="work-card__arc" xmlns="http://www.w3.org/2000/svg">
+                        <path />
+                    </svg>
+                    <div class="work-card__header-text">
+                        <h3 class="work-card__title">مدونة شخصية باستخدام هيوجو</h3>
                     </div>
-                    <a href="https://hugo-website-1ak.pages.dev/" >
-                        <img src="images/slide4.jpg" alt="معرض الاعمال">
-                    </a>
                 </div>
+                <p class="work-card__description">اضغط للذهاب للموقع</p>
             </div>
+        </a>
+    </li>
+</ul>
 
-            
 
-            <div class="slides fade">
-                <div class="image-holder">
-                    <div class="overlay">
-                        <h2 class="work-details"> صفحتي على جيت هب لرؤية المزيد من المشاريع
-                            <a class="visit-btn" href="https://github.com/WissamMU/webDevelopment-journey">
-                                اذهب الى الموقع
-                            </a>
-                        </h2>
+<ul class="work-cards" data-aos="fade-up" data-aos-duration="1000">
+    <li>
+        <a href="https://github.com/WissamMU/webDevelopment-journey" class="work-card" target="_blank">
+            <img src="images/slide5.jpg" class="work-card__image" alt="" />
+            <div class="work-card__overlay">
+                <div class="work-card__header">
+                    <svg class="work-card__arc" xmlns="http://www.w3.org/2000/svg">
+                        <path />
+                    </svg>
+                    <div class="work-card__header-text">
+                        <h3 class="work-card__title">صفحتي على جيت هب لرؤية المزيد من المشاريع</h3>
                     </div>
-                    <a href="https://github.com/WissamMU/webDevelopment-journey" >
-                        <img src="images/slide5.jpg" alt="معرض الاعمال">
-                    </a>
                 </div>
+                <p class="work-card__description">اضغط للذهاب للموقع</p>
             </div>
+        </a>
+    </li>
+</ul>
 
-            
+
+<ul class="work-cards" data-aos="fade-up" data-aos-duration="1000">
+    <li>
+        <a href="https://company-hugo.pages.dev/" class="work-card" target="_blank">
+            <img src="images/slide6.jpg" class="work-card__image" alt="" />
+            <div class="work-card__overlay">
+                <div class="work-card__header">
+                    <svg class="work-card__arc" xmlns="http://www.w3.org/2000/svg">
+                        <path />
+                    </svg>
+                    <div class="work-card__header-text">
+                        <h3 class="work-card__title">موقع شركة باستخدام هيوجو</h3>
+                    </div>
+                </div>
+                <p class="work-card__description">اضغط للذهاب للموقع</p>
+            </div>
+        </a>
+    </li>
+</ul>
+
+
+<ul class="work-cards" data-aos="fade-up" data-aos-duration="1000">
+    <li>
+        <a href="https://wissammu.github.io/news-page-scss-bootstrap/" class="work-card" target="_blank">
+            <img src="images/slide7.jpg" class="work-card__image" alt="" />
+            <div class="work-card__overlay">
+                <div class="work-card__header">
+                    <svg class="work-card__arc" xmlns="http://www.w3.org/2000/svg">
+                        <path />
+                    </svg>
+                    <div class="work-card__header-text">
+                        <h3 class="work-card__title">موقع اخباري باستخدام بوتستراب</h3>
+                    </div>
+                </div>
+                <p class="work-card__description">اضغط للذهاب للموقع</p>
+            </div>
+        </a>
+    </li>
+</ul>
 
         </div>
 
-        <div class="slides-BTNS">
-            <span class="next"><i class="fas fa-chevron-right"></i></span>
-            <span class="prev"><i class="fas fa-chevron-left"></i></span>
-        </div>
-
-    </div>
-
-</div>
-            </div>
-            <div class="row">
-                <div class="card card--half">
+        <div class="row">
+            <div class="card card--half" data-aos="fade-up" data-aos-duration="1000">
     <h2>آراء العملاء</h2>
 
     <div class="slides-container" id="reviews">
@@ -351,7 +369,7 @@
 
             
 
-            <div class="slides fade">
+            <div class="slides fade" id="slides" >
                 <div class="review-holder">
                     <p>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص</p>
                     <h3>محمد سالم</h3>
@@ -360,7 +378,7 @@
 
             
 
-            <div class="slides fade">
+            <div class="slides fade" id="slides" >
                 <div class="review-holder">
                     <p>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص</p>
                     <h3>أحمد سعيد</h3>
@@ -369,7 +387,7 @@
 
             
 
-            <div class="slides fade">
+            <div class="slides fade" id="slides" >
                 <div class="review-holder">
                     <p>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص</p>
                     <h3>منى اسماعيل</h3>
@@ -378,7 +396,7 @@
 
             
 
-            <div class="slides fade">
+            <div class="slides fade" id="slides" >
                 <div class="review-holder">
                     <p>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص</p>
                     <h3>سيد ذكى</h3>
@@ -396,7 +414,7 @@
 
     </div>
 </div>
-                <div class="card card--half">
+            <div class="card card--half" data-aos="fade-up" data-aos-duration="1000">
     <h2>تواصل معي</h2>
     <p class="contact-desc">يمكنك التواصل معي عبر الوسائل الآتية </p>
     
@@ -449,15 +467,20 @@
         </div>
     
 </div>
-            </div>
         </div>
+
     </div>
-    <footer>
+</div>
+<footer>
     <p>جميع الحقوق محفوظة &copy; وسام محمد مصطفى</p>
 </footer>
 
 
 
     <script src="js/sliders.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>
