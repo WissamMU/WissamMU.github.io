@@ -7,6 +7,13 @@
     --skill-1: 80%;
     --shadow: 0px 4px 10px #bdbdbd;
     --radius: 5px;
+
+    --surface-color: lightgray;
+    --curve: 40;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 /* general */
@@ -56,6 +63,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 5px;
 }
 
 .cover-info {
@@ -97,14 +105,16 @@ body {
     margin-bottom: 20px;
     border-bottom: 1px solid #d4d4d4;
     padding-bottom: 10px;
-    
+
 }
-.card >h2 > p {
+
+.card>h2>p {
     font-weight: normal;
     color: var(--gray-dark);
     font-size: small;
     display: inline;
 }
+
 .line {
     display: flex;
     flex-direction: column;
@@ -157,7 +167,7 @@ body {
 }
 
 /* skills section */
-
+/* 
 .skills__holder {
     display: flex;
     flex-wrap: wrap;
@@ -218,6 +228,41 @@ body {
 
 .skill:hover .skill__icon i {
     color: var(--green);
+} */
+
+
+
+/* skills */
+
+.skills .skills__holder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skills .skills__holder .skill {
+    display: flex;
+    width: 200px;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 25px;
+}
+
+
+.skill__icon img {
+    width: 200px;
+    height: 200px;
+}
+
+.skill__name {
+    margin-top: 10px;
+}
+
+.skill__name h2 {
+    font-size: 24px;
+    font-weight: bold;
+
 }
 
 /* work */
@@ -238,12 +283,12 @@ body {
 .image-holder .overlay {
     position: absolute;
     opacity: 0;
-    top: 0;
+    top: 10px;
     left: 0;
     width: 100%;
     height: 100%;
     background: var(--gary);
-    transition: opacity 0.3s ease;
+    transition: 0.3s ease-in-out;
 
     display: flex;
     justify-content: center;
@@ -252,6 +297,8 @@ body {
 
 .image-holder:hover .overlay {
     opacity: 0.9;
+    top: 0;
+    top: 0;
 }
 
 .visit-btn {
@@ -272,10 +319,143 @@ body {
     color: var(--gray-dark) !important;
 }
 
-.work-details{
+.work-details {
     display: flex;
     align-items: center;
     flex-direction: column;
+    text-align: center;
+}
+
+/* work cards */
+
+.work-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 20px;
+    padding: 0;
+    list-style-type: none;
+}
+
+.work-card {
+    position: relative;
+    display: block;
+    height: 100%;
+    border-radius: calc(var(--curve) * 1px);
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.work-card__image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 60px;
+}
+
+.work-card__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    border-radius: calc(var(--curve) * 1px);
+    background-color: var(--surface-color);
+    transform: translateY(100%);
+    transition: .2s ease-in-out;
+}
+
+.work-card:hover .work-card__overlay {
+    transform: translateY(0);
+}
+
+.work-card__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+    border-radius: calc(var(--curve) * 1px) 0 0 0;
+    background: linear-gradient(175deg,gray 50%, lightgray 50%);
+    transform: translateY(-100%);
+    transition: .2s ease-in-out;
+}
+
+.work-card__arc {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    z-index: 1;
+}
+
+.work-card__arc path {
+    fill: var(--surface-color);
+    d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+}
+
+.work-card:hover .work-card__header {
+    transform: translateY(0);
+}
+
+.work-card__title {
+    font-size: 1em;
+    margin: 0 0 .3em;
+    color: #6A515E;
+}
+
+.work-card__tagline {
+    display: block;
+    margin: 1em 0;
+    font-family: "MockFlowFont";
+    font-size: .8em;
+    color: #D7BDCA;
+}
+
+.work-card__description {
+    padding: 2em 2em;
+    margin: 0;
+    color: white;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+
+/* reviews */
+
+.review-holder {
+    height: 350px;
+    padding: 0 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.review-holder>p {
+    position: relative;
+    margin: 0;
+    font-size: 18px;
+    line-height: 28px;
+    padding-right: 20px;
+}
+
+.review-holder>p:after {
+    content: '”';
+    position: absolute;
+    top: 11px;
+    color: #848484;
+    right: -15px;
+    height: 40px;
+    width: 20px;
+    font-size: 77px;
+}
+
+.review-holder>h3 {
+    margin: 10px 0 0 0;
+    font-size: 20px;
 }
 
 /* slider */
@@ -316,41 +496,6 @@ body {
     animation-duration: 1.5s;
 }
 
-/* reviews */
-
-.review-holder {
-    height: 350px;
-    padding: 0 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.review-holder>p {
-    position: relative;
-    margin: 0;
-    font-size: 18px;
-    line-height: 28px;
-    padding-right: 20px;
-}
-
-.review-holder>p:after {
-    content: '”';
-    position: absolute;
-    top: 11px;
-    color: #848484;
-    right: -15px;
-    height: 40px;
-    width: 20px;
-    font-size: 77px;
-}
-
-.review-holder>h3 {
-    margin: 10px 0 0 0;
-    font-size: 20px;
-}
-
 /* contact */
 
 .contact-desc {
@@ -358,7 +503,7 @@ body {
     color: var(--gray-dark);
 }
 
-.ltr{
+.ltr {
     direction: ltr;
     float: right;
 }
@@ -452,11 +597,82 @@ footer p {
         padding: 0;
     }
 
-    .image-holder{
+    .image-holder {
         height: 250px;
     }
 
     .skill:not(:last-child) {
         margin-bottom: 20px;
+    }
+}
+
+/*-smaller than 820px-*/
+@media (max-width: 820px) {
+    .skills .skills__holder .skill {
+        width: 150px;
+        margin: 10px;
+    }
+
+    .skill__icon img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+
+/*-smaller than 420px-*/
+
+@media (max-width: 420px) {
+    .work-details {
+        font-size: 14px;
+    }
+
+    .card>h2>p {
+        display: none !important;
+    }
+
+    .slides-BTNS>span>i {
+        font-size: 25px !important;
+    }
+
+    .review-holder>p {
+        font-size: 14px;
+    }
+
+    .review-holder {
+        height: auto;
+    }
+
+    .card {
+        min-height: auto;
+    }
+
+    .skills .skills__holder .skill {
+        width: 100px;
+        margin: 10px;
+    }
+
+    .skill__icon img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .work-card__title {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .work-card__header {
+        padding: 0.6em;
+    }
+
+    .work-card__image {
+        margin-bottom: 30px;
+    }
+    ul.work-cards{
+        margin: 0 0 20px 0;
+    }
+    .work-card__description{
+        padding: 15px;
     }
 }

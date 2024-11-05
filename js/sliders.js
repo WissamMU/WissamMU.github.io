@@ -47,7 +47,7 @@ function slider(name) {
 }
 
 /*-call work slider-*/
-slider("work");
+// slider("work");
 
 /*-call reviews slider-*/
 slider("reviews");
