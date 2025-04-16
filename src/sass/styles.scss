@@ -1,24 +1,58 @@
 $primary: #f2f2f3;
 
+@font-face {
+  font-family: "Cairo"; // You can name this whatever you like
+  src: url("../fonts/Cairo-Regular.ttf") format("truetype"); // Path relative to the compiled CSS output
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   background-color: $primary !important;
+  font-family: "Cairo", sans-serif; // Apply the font and provide a fallback
 }
 
 .ltr {
   direction: ltr;
 }
 
-#hero{
-    .photo {
-      max-height: 500px;
+#hero {
+
+  .about-me {
+    h1{
+      font-size: 5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    h2{
+      font-weight: bold;
+    }
+  }
+
+
+  .photo {
+    max-height: 500px;
+    border: 1px solid #000;
+  }
+
+  .btn-links {
+    aspect-ratio: 1 / 1;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    border: none;
+
+    span{
+      font-size: 1.5rem;
+      font-weight: 550;
     }
 
-    .btn-links{
-        min-height: 200px;
-        min-width: 200px;
-        background-color: red;
+    a{
+      font-size: bold;
     }
+  }
 }
+
 
 .footer {
   $line-width: 80%;
@@ -43,5 +77,13 @@ body {
     @media (max-width: 768px) {
       width: 90%; // Wider line on mobile
     }
+  }
+
+  h1{
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  a{
+    cursor: pointer;
   }
 }

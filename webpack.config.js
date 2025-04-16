@@ -52,10 +52,20 @@ module.exports = {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
       },
-      { 
+      {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
+        generator: {
+          filename: 'images/[name][ext][query]' // Outputs images to an 'images' folder with original name and extension
+        }
       },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[name][ext][query]' // Outputs fonts to a 'fonts' folder
+        }
+      },      
     ],
   },
   plugins: [
