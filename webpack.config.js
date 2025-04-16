@@ -23,22 +23,36 @@ module.exports = {
         loader: "html-loader",
         options: {
           minimize: true,
-          sources: false, // Note: If you want html-loader to process image sources in HTML (like <img src="...">), set this to true or remove it.
+          // sources: false, // Note: If you want html-loader to process image sources in HTML (like <img src="...">), set this to true or remove it.
         },
       },
       {
-        test: /\.css$/i,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              esModule: false,
-            },
-          },
-          "css-loader",
-        ],
+        test: /\.(scss)$/,
+        use: [{
+          loader: 'style-loader', // inject CSS to page
+        }, {
+          loader: 'css-loader', // translates CSS into CommonJS modules
+        }, {
+          loader: 'postcss-loader', // Run post css actions
+          options: {
+            postcssOptions: { // Corrected: plugins nested under postcssOptions
+              plugins: function () { // post css plugins, can be exported to postcss.config.js
+                return [
+                  require('precss'),
+                  require('autoprefixer')
+                ];
+              }
+            }
+          }
+        }, {
+          loader: 'sass-loader' // compiles Sass to CSS
+        }]
       },
-      { // Added rule for images
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      },
+      { 
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
       },

@@ -1,0 +1,47 @@
+$primary: #f2f2f3;
+
+body {
+  background-color: $primary !important;
+}
+
+.ltr {
+  direction: ltr;
+}
+
+#hero{
+    .photo {
+      max-height: 500px;
+    }
+
+    .btn-links{
+        min-height: 200px;
+        min-width: 200px;
+        background-color: red;
+    }
+}
+
+.footer {
+  $line-width: 80%;
+  $line-color: gray;
+  $line-thickness: 1px;
+  $spacing-above: 20px;
+
+  position: relative;
+  padding-top: $spacing-above;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: $line-width;
+    height: $line-thickness;
+    background-color: $line-color;
+
+    // Optional enhancements
+    @media (max-width: 768px) {
+      width: 90%; // Wider line on mobile
+    }
+  }
+}
