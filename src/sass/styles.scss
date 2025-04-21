@@ -17,18 +17,16 @@ body {
 }
 
 #hero {
-
   .about-me {
-    h1{
+    h1 {
       font-size: 5rem;
       font-weight: 600;
       margin-bottom: 1rem;
     }
-    h2{
+    h2 {
       font-weight: bold;
     }
   }
-
 
   .photo {
     max-height: 500px;
@@ -37,22 +35,28 @@ body {
 
   .btn-links {
     aspect-ratio: 1 / 1;
-    display: flex; 
+    display: flex;
     justify-content: center;
     align-items: center;
-    border: none;
+    border: 1px solid #000;
 
-    span{
-      font-size: 1.5rem;
-      font-weight: 550;
+    &:hover {
+      color: black ;
+      background-color: $primary !important;
+      
     }
 
-    a{
+    span {
+      font-size: 1.5rem;
+      font-weight: 600;
+
+    }
+    
+    a {
       font-size: bold;
     }
   }
 }
-
 
 .footer {
   $line-width: 80%;
@@ -79,11 +83,13 @@ body {
     }
   }
 
-  h1{
+  h1 {
     font-size: 1.5rem;
     font-weight: bold;
   }
-  a{
+  a {
     cursor: pointer;
   }
 }
+
+

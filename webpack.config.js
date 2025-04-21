@@ -75,7 +75,19 @@ module.exports = {
     new CssMinimizerPlugin(),
     new HtmlWebpackPlugin({
       template: "./src/index.html",
-      filename: "./index.html",
+      filename: "index.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/projects.html",
+      filename: "projects.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/resume.html",
+      filename: "resume.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/contact.html",
+      filename: "contact.html",
     }),
   ],
 };
