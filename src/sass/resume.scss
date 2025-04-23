@@ -1,13 +1,73 @@
 @use "./variables.scss" as *;
 
 #resume {
+  // Header Section
   .resume-header {
+    text-align: center;
+    padding-top: 3rem;
+    margin-bottom: 2rem;
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--secondary-color);
+      margin-bottom: 1rem;
+
+      span {
+        font-size: 1.2rem;
+        color: var(--light-text);
+      }
+    }
+
+    .about-me {
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      font-size: 1.1rem;
+      color: var(--dark-text);
+
+      p {
+        margin: 0;
+      }
+    }
+
     .contact {
       position: relative;
-      padding-bottom: 20px;
+      background-color: var(--light-bg);
+      padding: 2rem;
+      border-radius: var(--border-radius);
+      margin-top: 2rem;
 
       h1 {
         font-size: large;
+      }
+
+      a {
+        color: var(--light-text);
+        transition: var(--transition);
+        text-decoration: none;
+
+        &:hover {
+          color: var(--primary-color);
+        }
+
+        p {
+          margin: 0;
+        }
+      }
+
+      .ltr {
+        direction: ltr;
+        text-align: left;
+      }
+
+      .row > div {
+        margin-bottom: 1.5rem;
+      }
+
+      h4 {
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--secondary-color);
       }
 
       &::before {
@@ -23,37 +83,47 @@
     }
   }
 
+  // Main Container Styles
   .container {
-    // Style for skills list
-    .skills-list {
-      margin-bottom: 1.5rem;
-      
-      .skill {
-        display: inline-block;
-        background: #f5f5f5;
-        padding: 0.3rem 0.8rem;
-        margin: 0.3rem;
-        border-radius: 4px;
-        font-size: 0.9rem;
+    // Section Dividers
+    .section-divider {
+      position: relative;
+      padding: 2rem 0;
+
+      &:not(:last-of-type)::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 10%;
+        right: 10%;
+        height: 1px;
+        background-color: #ccc;
+        opacity: 0.6;
+      }
+
+      > [class*="col-"] {
+        position: relative;
+        z-index: 1;
+      }
+
+      h2 {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: var(--secondary-color);
+        margin-bottom: 1.5rem;
+
+        i {
+          color: var(--primary-color);
+          margin-left: 0.5rem;
+        }
       }
     }
-  
-    // Style for education and certification items
-    .education-item, .certification-item {
-      margin-bottom: 1.5rem;
-      
-      .date {
-        color: #666;
-        font-size: 0.9rem;
-      }
-    }
-  
-    // Style for the rows to add lines between sections
+
+    // Rows with dividers
     .row {
       padding: 2rem 0;
       position: relative;
-  
-      // Add line after each section except the last one
+
       &:not(:last-child)::after {
         content: "";
         position: absolute;
@@ -65,17 +135,172 @@
         width: 100%;
         margin: 0 auto;
       }
-  
-      // Adjust the line position to account for column padding
+
       > [class*="col-"] {
         position: relative;
         z-index: 1;
       }
+
+      &:last-child {
+        padding-bottom: 0;
+      }
     }
-  
-    // Remove padding from the last row to prevent extra space
-    .row:last-child {
-      padding-bottom: 0;
+  }
+
+  // Skills Section
+  #skills {
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+
+      .skill-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70px;
+        text-align: center;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: translateY(-5px);
+        }
+      }
+
+      .skill-icon {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+        color: #3498db;
+      }
+
+      .skill {
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: #333;
+      }
+
+      .fa-html5 { color: #e34f26; }
+      .fa-css3-alt { color: #264de4; }
+      .fa-js-square { color: #f7df1e; }
+      .fa-bootstrap { color: #7952b3; }
+      .fa-sass { color: #cc6699; }
+      .fa-react { color: #61dafb; }
+      .fa-github { color: #333; }
+    }
+  }
+
+  // Education & Certification Items
+  .education-item,
+  .certification-item,
+  .hobbies-list li {
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--box-shadow);
+    }
+  }
+
+  .education-item,
+  .certification-item {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 1.5rem;
+
+    h3 {
+      font-size: 1.1rem;
+      color: var(--secondary-color);
+      margin-bottom: 0.5rem;
+
+      i {
+        color: var(--accent-color);
+        margin-left: 0.5rem;
+      }
+    }
+
+    p {
+      color: var(--dark-text);
+      margin-bottom: 0.3rem;
+    }
+
+    .date {
+      display: inline-block;
+      background-color: var(--light-bg);
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      color: var(--light-text);
+
+      i {
+        margin-left: 0.4rem;
+        color: var(--primary-color);
+      }
+    }
+  }
+
+  // Hobbies List
+  .hobbies-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+
+    li {
+      background-color: #fff;
+      padding: 2rem 1rem;
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      height: 100%;
+
+      i {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+        color: var(--primary-color);
+      }
+
+      span {
+        display: block;
+        font-size: 1.1rem;
+        font-weight: 500;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hobbies-list {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #resume {
+    .resume-header {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .contact {
+        text-align: right;
+
+        .row {
+          flex-direction: column;
+
+          > div {
+            margin-bottom: 1.5rem;
+          }
+        }
+      }
     }
   }
 }
