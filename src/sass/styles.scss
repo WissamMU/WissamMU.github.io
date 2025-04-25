@@ -1,5 +1,6 @@
 @use './variables.scss' as *;
 @use './resume.scss'; 
+@use './projects.scss'; 
 
 @font-face {
   font-family: "Cairo"; // You can name this whatever you like
@@ -40,23 +41,35 @@ body {
     justify-content: center;
     align-items: center;
     border: 1px solid #000;
-
-    &:hover {
-      color: black ;
-      background-color: $primary !important;
-      
-    }
-
+    transition: all 0.5s ease-in-out;
+    color: black;
+  
     span {
       font-size: 1.5rem;
       font-weight: 600;
-
     }
-    
+  
+    // Reset anchor font-weight properly
     a {
-      font-size: bold;
+      font-weight: bold;
+    }
+  
+    &.bg-warning:hover {
+      background-color: $primary !important;
+      color: #ffc107; // Bootstrap's warning color
+    }
+  
+    &.bg-info:hover {
+      background-color: $primary !important;
+      color: #0dcaf0; // Bootstrap's info color
+    }
+  
+    &.bg-danger:hover {
+      background-color: $primary !important;
+      color: #dc3545; // Bootstrap's danger color
     }
   }
+  
 }
 
 .footer {

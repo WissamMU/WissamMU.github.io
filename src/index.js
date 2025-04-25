@@ -4,4 +4,3 @@ import '@fortawesome/fontawesome-free/js/all.min.js';
 import "./sass/styles.scss";
 
 console.log("Hello World");
-
