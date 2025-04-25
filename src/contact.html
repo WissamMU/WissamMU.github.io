@@ -25,7 +25,7 @@
   </head>
   <body>
     <section id="home-navbar">
-      <nav class="navbar navbar-expand-lg">
+      <nav class="navbar navbar-expand-lg mb-5">
         <div class="container">
           <a class="navbar-brand" href="./index.html"
             >وسام محمد مصطفى
@@ -53,7 +53,7 @@
                 <a class="nav-link" href="./projects.html">مشاريع</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./contact.html">تواصل معي</a>
+                <a class="nav-link active" href="./contact.html">تواصل معي</a>
               </li>
             </ul>
           </div>
@@ -61,38 +61,90 @@
       </nav>
     </section>
 
-    <section class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3 d-flex flex-column align-items-start">
-            <h1>الهاتف</h1>
-            <a
-              href="tel:966508306463"
-              class="link-underline link-underline-opacity-0"
-              ><p class="text-muted ltr">+966 50 830 6463</p></a
-            >
-          </div>
-          <div class="col-md-3 d-flex flex-column align-items-start">
-            <h1>الايميل</h1>
-            <a
-              href="eng.wissam.mu@gmail.com"
-              class="link-underline link-underline-opacity-0"
-            >
-              <p class="text-muted ltr">eng.wissam.mu@gmail.com</p></a
-            >
-          </div>
-          <div class="col-md-3 d-flex flex-column align-items-start">
-            <h1>جيت هب</h1>
-            <a
-              href="https://github.com/WissamMU"
-              class="link-underline link-underline-opacity-0"
-            >
-              <p class="text-muted ltr">WissamMU</p></a
-            >
-          </div>
+    <section class="container py-5 my-5">
+      <div class="row">
+        <div class="col-md-5 mb-4 d-flex flex-column align-items-start">
+          <h2 class="fw-bolder">تواصل معنا</h2>
+          <p>أتطلع إلى سماع أخبارك</p>
+          <h5 class="fw-bold">الهاتف</h5>
+          <a
+            href="tel:966508306463"
+            class="link-underline link-underline-opacity-0"
+            ><p class="text-muted ltr">+966 50 830 6463</p></a
+          >
+          <h5 class="fw-bold">الايميل</h5>
+          <a
+            href="eng.wissam.mu@gmail.com"
+            class="link-underline link-underline-opacity-0"
+          >
+            <p class="text-muted ltr">eng.wissam.mu@gmail.com</p></a
+          >
+          <h5 class="fw-bold">جيت هب</h5>
+          <a
+            href="https://github.com/WissamMU"
+            class="link-underline link-underline-opacity-0"
+          >
+            <p class="text-muted ltr">WissamMU</p></a
+          >
+        </div>
+
+        <div class="col-md-7">
+          <form id="contact-form" class="p-4 border rounded shadow">
+            <div class="row mb-3">
+              <div class="col">
+                <label class="form-label">الاسم الأول *</label>
+                <input
+                  type="text"
+                  name="first_name"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div class="col">
+                <label class="form-label">اسم العائلة *</label>
+                <input
+                  type="text"
+                  name="last_name"
+                  class="form-control"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col">
+                <label class="form-label">البريد الإلكتروني *</label>
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div class="col">
+                <label class="form-label">الموضوع</label>
+                <input type="text" name="subject" class="form-control" />
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">الرسالة</label>
+              <textarea
+                name="message"
+                rows="5"
+                class="form-control"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-warning w-100 fw-bold">
+              إرسال
+            </button>
+          </form>
         </div>
       </div>
     </section>
-    
+
+    <script src="./index.js"></script>
   </body>
 </html>

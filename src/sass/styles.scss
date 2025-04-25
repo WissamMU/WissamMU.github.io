@@ -1,6 +1,5 @@
 @use './variables.scss' as *;
 @use './resume.scss'; 
-@use './projects.scss'; 
 
 @font-face {
   font-family: "Cairo"; // You can name this whatever you like
@@ -95,3 +94,5 @@ body {
     cursor: pointer;
   }
 }
+
+
