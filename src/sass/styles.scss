@@ -46,6 +46,11 @@ body {
     span {
       font-size: 1.5rem;
       font-weight: 600;
+
+      @media (max-width: 390px){
+        font-size: 1rem;
+        font-weight: 500;
+      }
     }
   
     // Reset anchor font-weight properly
@@ -67,6 +72,8 @@ body {
       background-color: $primary !important;
       color: #dc3545; // Bootstrap's danger color
     }
+
+
   }
   
 }
