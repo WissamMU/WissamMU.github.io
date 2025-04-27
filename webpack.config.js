@@ -13,7 +13,7 @@ module.exports = {
     app: "./src/index.js",
   },
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "build"),
     filename: "main.js",
     assetModuleFilename: 'images/[hash][ext][query]', // Optional: configure output path for assets
     clean: true, // Optional: Clean the output directory before build
