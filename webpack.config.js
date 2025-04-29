@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const Dotenv = require('dotenv-webpack');
 
 
@@ -91,6 +92,18 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/contact.html",
       filename: "contact.html",
+    }),
+    new ImageMinimizerPlugin({
+      minimizer: {
+        implementation: ImageMinimizerPlugin.imageminMinify,
+        options: {
+          plugins: [
+            ["mozjpeg", { quality: 75 }],     // لضغط صور JPEG بنسبة جودة 75%
+            ["pngquant", { quality: [0.65, 0.90], speed: 4 }],  // لضغط PNG
+            ["svgo", {}],                     // لضغط SVG
+          ],
+        },
+      },
     }),
   ],
 };
